@@ -75,3 +75,10 @@ const PORT = process.env.PORT || 8000;
 app.listen(PORT, () => {
   console.log("Server is running on ", PORT);
 });
+const jwt = require('jsonwebtoken');
+const crypto = require('crypto');
+
+const secretKey = 'yourSecretKey';
+const username = 'john_doe';
+
+// Hash the username with a salt
